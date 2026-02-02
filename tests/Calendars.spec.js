@@ -15,3 +15,6 @@ test('Calendar Validations', async ({page}) => {
     await page.locator(".react-calendar__month-view__days__day").nth(parseInt(date) - 1).click();  // select the desired date
 
 })
+
+
+// this is the change to be tested
