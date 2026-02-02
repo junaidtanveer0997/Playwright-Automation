@@ -89,7 +89,7 @@ test('Child Windows Handling Test', async ({browser}) => {
     //await page.pause();
 })
 
-test.only('End to end project', async ({page}) => {        
+test('End to end project', async ({page}) => {        
     await page.goto("https://rahulshettyacademy.com/client/#/auth/login");
     const registerBtn = page.locator('.btn1');
     const firstName = page.locator('#firstName');
@@ -254,4 +254,7 @@ test.only('End to end project', async ({page}) => {
             break;
         }
     }
+    const orderDetailsPage = await page.locator(".col-text").textContent();
+    expect(orderDetailsPage).toBe(orderId);  // assertion to verify that order ID on details page matches
+    console.log("✅Order details page verified successfully.");
     });
