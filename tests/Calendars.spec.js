@@ -12,7 +12,7 @@ test('Calendar Validations', async ({page}) => {
     await page.locator(".react-calendar__navigation__label__labelText").click();  // click again on month-year label to switch to year selection view
     await page.getByText(year).click();   // select the desired year
     await page.locator(".react-calendar__year-view__months__month").nth(parseInt(monthNumber) - 1).click();  // select the desired month
-    await page.locator(".react-calendar__month-view__days__day").nth(parseInt(date) - 1).click();  // select the desired date
+    await page.locator("//abbr[text()='"+date+"']").click();  // select the desired date
 
 })
 
