@@ -17,6 +17,7 @@ const config = ({                        // config is JS object with key-value p
     screenshot: 'on',                 // take screenshot of every test step
     trace: 'retain-on-failure',       // trace is used for keeping log / trace of actions performed during the test (on, off, retain-on-failure)
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+     ignoreHTTPSErrors: true,      
   },
 
 });
